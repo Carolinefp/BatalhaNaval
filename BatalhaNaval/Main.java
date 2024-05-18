@@ -3,6 +3,8 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -16,11 +18,12 @@ public class Main {
         String nomeJogador2 = scanner.nextLine();
         Jogador jogador2 = new Jogador(nomeJogador2);
 
+        Tabuleiro tabuleiro = new Tabuleiro();
+
         Jogo jogo = new Jogo(jogador1, jogador2);
-        jogo.iniciarJogo();
+        jogo.iniciarJogo(tabuleiro);
 
         scanner.close();
     }
 }
-
 
